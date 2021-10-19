@@ -3,7 +3,9 @@ if !has('python3')
   finish
 endif
 
-function! WrapString() range
+command! -nargs=0 WrapString call <SID>WrapString ()
+
+function! <SID>WrapString() range
 
 python3 << EOF
 
@@ -64,4 +66,4 @@ for j in range(i, len(lines)):
 
 EOF
 
-endfunction
+"endfunction
