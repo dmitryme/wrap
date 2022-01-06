@@ -3,9 +3,9 @@ if !has('python3')
   finish
 endif
 
-command! -nargs=0 WrapString call <SID>WrapString ()
+command! -range WrapString call WrapStringFn ()
 
-function! <SID>WrapString() range
+function! WrapStringFn() range
 
 python3 << EOF
 
